@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: #fafafa;
+  /* 54px é o tamanho do topo e 34px a margem entre o bloco de stories e o topo */
+  padding-top: calc(54px + 34px);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 975px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  > main {
+    flex: 2;
+    width: 100%;
+    max-width: 614px;
+  }
+
+  > aside {
+    flex: 1;
+  }
+}

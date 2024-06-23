@@ -1,17 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Aside, SkeletonSuggestion, SkeletonUser } from "./styles";
+import { Aside, SkeletonUser } from "./styles";
 import generateFakeUserData from "./faker";
 import Image from "next/image";
-import Link from "next/link";
-
-type ISuggestion = {
-  id: string;
-  username: string;
-  avatar: string;
-  followsYou: boolean;
-};
+import Suggestions, { ISuggestion } from "./Suggestions";
 
 export interface IUserData {
   user: {
@@ -62,52 +55,7 @@ const AsideComponent: React.FC = () => {
           </>
         )}
       </div>
-      <div className="suggestions-wrapper">
-        <div className="header-container">
-          <h5>Sugestões para você</h5>
-          <Link href="#">Ver tudo</Link>
-        </div>
-        <div className="suggestions-list">
-          {loading
-            ? Array.from({ length: 5 }).map((_, index) => (
-                <SkeletonSuggestion key={index + 1}>
-                  <div className="info">
-                    <div className="skeleton img"></div>
-                    <div>
-                      <div className="skeleton username"></div>
-                      <div className="skeleton message"></div>
-                    </div>
-                  </div>
-                  <div className="skeleton follow"></div>
-                </SkeletonSuggestion>
-              ))
-            : data?.suggestions.map(suggestion => (
-                <Link key={suggestion.id} href="#">
-                  <div className="suggestion">
-                    <div className="info">
-                      <div className="avatar">
-                        <Image
-                          src={suggestion.avatar}
-                          width={32}
-                          height={32}
-                          alt={suggestion.username}
-                        />
-                      </div>
-                      <div>
-                        <h6>{suggestion.username}</h6>
-                        <p className="message">
-                          {suggestion.followsYou
-                            ? "Segue você"
-                            : "Novo no instagram"}
-                        </p>
-                      </div>
-                    </div>
-                    <span className="follow">Seguir</span>
-                  </div>
-                </Link>
-              ))}
-        </div>
-      </div>
+      <Suggestions loading={loading} suggestions={data?.suggestions ?? []} />
       <div className="footer-text">
         Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos •
         Localizações • Contas mais relevantes • Hashtags • Idioma

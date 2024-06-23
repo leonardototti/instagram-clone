@@ -53,8 +53,6 @@ const StoriesComponent: React.FC = () => {
           spaceBetween={2}
           slidesPerView="auto"
           slidesPerGroup={7}
-          centeredSlides
-          centeredSlidesBounds
           navigation={{
             nextEl: ".btn-next",
             prevEl: ".btn-prev",

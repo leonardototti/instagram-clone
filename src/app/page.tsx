@@ -1,3 +1,4 @@
+import Aside from "@/components/Aside";
 import Stories from "@/components/Stories";
 
 export default function Home() {
@@ -7,7 +8,7 @@ export default function Home() {
         <main>
           <Stories />
         </main>
-        <aside></aside>
+        <Aside />
       </div>
     </div>
   );

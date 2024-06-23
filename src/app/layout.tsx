@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
 import Header from "@/components/Header";
 import StyledComponentsRegistry from "@/registry";
 
@@ -23,21 +22,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <Head>
+      <head>
         <link
           rel="icon"
           sizes="192x192"
           href="https://static.cdninstagram.com/rsrc.php/v3/yI/r/VsNE-OHk_8a.png"
         />
-
         <link
           data-default-icon="https://static.cdninstagram.com/rsrc.php/y4/r/QaBlI0OZiks.ico"
           rel="shortcut icon"
           type="image/x-icon"
           href="https://static.cdninstagram.com/rsrc.php/y4/r/QaBlI0OZiks.ico"
         />
-        <title>Instagram</title>
-      </Head>
+      </head>
       <body className={roboto.className}>
         <StyledComponentsRegistry>
           <Header />

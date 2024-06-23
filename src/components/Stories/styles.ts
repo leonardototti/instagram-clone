@@ -47,3 +47,37 @@ export const Stories = styled.div`
     }
   }
 `;
+
+export const SkeletonContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0 12px;
+`;
+
+export const SkeletonItem = styled.div`
+  width: 78px;
+  min-width: 78px;
+  height: 83px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .img {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    margin-bottom: 3px;
+  }
+
+  .text {
+    width: 80%;
+    height: 14px;
+    border-radius: 3px;
+  }
+`;

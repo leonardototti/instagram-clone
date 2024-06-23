@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { Stories } from "./styles";
+import { SkeletonContainer, SkeletonItem, Stories } from "./styles";
 
 import generateFakeStories from "./faker";
 import Story from "./Story";
@@ -33,13 +33,20 @@ const StoriesComponent: React.FC = () => {
 
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, Math.floor(Math.random() * 1000) + 500);
   }, []);
 
   return (
     <Stories>
-      {!data && loading ? (
-        <></>
+      {loading ? (
+        <SkeletonContainer>
+          {Array.from({ length: 10 }).map((_, index) => (
+            <SkeletonItem key={index + 1}>
+              <div className="skeleton img"></div>
+              <div className="skeleton text"></div>
+            </SkeletonItem>
+          ))}
+        </SkeletonContainer>
       ) : (
         <Swiper
           modules={[Navigation, A11y, FreeMode]}

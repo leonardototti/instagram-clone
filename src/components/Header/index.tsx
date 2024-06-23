@@ -4,6 +4,13 @@ import Image from "next/image";
 import { Header } from "./styles";
 import Link from "next/link";
 
+import {
+  IoHeartOutline,
+  IoPaperPlaneOutline,
+  IoCompassOutline,
+  IoPersonOutline,
+} from "react-icons/io5";
+
 const HeaderComponent: React.FC = () => {
   return (
     <Header>
@@ -17,40 +24,16 @@ const HeaderComponent: React.FC = () => {
         </div>
         <div className="actions-wrapper">
           <Link href="#">
-            <Image
-              src="paperplane.svg"
-              alt="Mensagens"
-              width={22}
-              height={22}
-              title="Mensagens"
-            />
+            <IoPaperPlaneOutline color="#000" size={22} />
           </Link>
           <Link href="#">
-            <Image
-              src="compass.svg"
-              alt="Explorar"
-              width={22}
-              height={22}
-              title="Explorar"
-            />
+            <IoCompassOutline color="#000" size={22} />
           </Link>
           <Link href="#">
-            <Image
-              src="heart.svg"
-              alt="Notificações"
-              width={22}
-              height={22}
-              title="Notificações"
-            />
+            <IoHeartOutline color="#000" size={22} />
           </Link>
           <Link href="#">
-            <Image
-              src="person.svg"
-              alt="Perfil"
-              width={22}
-              height={22}
-              title="Perfil"
-            />
+            <IoPersonOutline color="#000" size={22} />
           </Link>
         </div>
       </div>

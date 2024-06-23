@@ -10,6 +10,7 @@ export const Stories = styled.div`
   display: flex;
   align-items: center;
   gap: 14px;
+  margin-bottom: 24px;
   position: relative;
 
   .swiper {

@@ -40,6 +40,11 @@ export const SkeletonItem = styled.div`
     height: 100%;
     max-height: 612px;
     aspect-ratio: 1/1;
+
+    @media (max-width: 614px) {
+      width: 100vw;
+      height: 100vw;
+    }
   }
 
   footer {

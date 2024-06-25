@@ -10,6 +10,10 @@ export const Header = styled.header`
   left: 0;
   z-index: 10;
 
+  @media (max-width: 614px) {
+    padding: 0 20px;
+  }
+
   .container {
     display: flex;
     align-items: center;
@@ -24,6 +28,10 @@ export const Header = styled.header`
     gap: 21px;
     /* Relativo para posicionar o pseudo-elemento */
     position: relative;
+
+    @media (max-width: 614px) {
+      position: static;
+    }
 
     /* Pseudo-elemento, precisa do content para ser renderizado na página,
     normalmente seria o texto a ser exibido */
@@ -41,6 +49,10 @@ export const Header = styled.header`
       /* Tamanho do ícone do insta é 22px, quero que ela se posicione a
       mais 10px, que seria o meio entre as duas imagens */
       left: 32px;
+
+      @media (max-width: 614px) {
+        display: none;
+      }
     }
 
     /* Segundo elemento que é filho direto de logo-wrapper, nth-child seleciona
@@ -49,6 +61,10 @@ export const Header = styled.header`
       margin-top: 5px;
 
       @media (max-width: 614px) {
+        position: absolute;
+        top: calc(50% - 2px);
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
   }
@@ -89,5 +105,11 @@ export const Header = styled.header`
     display: flex;
     align-items: center;
     gap: 20px;
+
+    @media (max-width: 614px) {
+      & > *:not(:first-child) {
+        display: none;
+      }
+    }
   }
 `;

@@ -13,6 +13,15 @@ export const Stories = styled.div`
   margin-bottom: 24px;
   position: relative;
 
+  @media (max-width: 614px) {
+    margin-bottom: 0;
+    border: none;
+    background: transparent;
+    border-radius: 0px;
+    height: 120px;
+    padding-bottom: 20px;
+  }
+
   .swiper {
     padding: 0 12px;
 

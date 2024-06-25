@@ -16,6 +16,12 @@ body {
   padding-top: calc(54px + 34px);
 }
 
+@media (max-width: 614px) {
+  body {
+    padding-top: 54px;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -26,6 +32,12 @@ a {
   max-width: 975px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+@media (max-width: 614px) {
+  .container {
+    padding: 0;
+  }
 }
 
 .main-grid {

@@ -52,12 +52,20 @@ const StoriesComponent: React.FC = () => {
           modules={[Navigation, A11y, FreeMode]}
           spaceBetween={2}
           slidesPerView="auto"
-          slidesPerGroup={7}
+          slidesPerGroup={4}
           navigation={{
             nextEl: ".btn-next",
             prevEl: ".btn-prev",
           }}
           freeMode
+          breakpoints={{
+            614: {
+              slidesPerGroup: 5,
+            },
+            900: {
+              slidesPerGroup: 7,
+            },
+          }}
         >
           {(data || []).map(story => (
             <SwiperSlide key={story.id}>

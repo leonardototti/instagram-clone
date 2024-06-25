@@ -6,6 +6,12 @@ export const Post = styled.article`
   border-radius: 3px;
   margin-bottom: 60px;
 
+  @media (max-width: 614px) {
+    border-left: none;
+    border-right: none;
+    margin-bottom: 35px;
+  }
+
   header {
     padding: 14px 16px 13px;
     display: flex;

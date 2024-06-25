@@ -2,7 +2,6 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Header";
 import StyledComponentsRegistry from "@/registry";
 
 export const metadata: Metadata = {
@@ -42,10 +41,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <StyledComponentsRegistry>
-          <Header />
-          {children}
-        </StyledComponentsRegistry>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
   );

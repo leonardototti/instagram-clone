@@ -1,17 +1,23 @@
+import Header from "@/components/Header";
+import Stories from "@/components/Stories";
 import Aside from "@/components/Aside";
 import Posts from "@/components/Posts";
-import Stories from "@/components/Stories";
+import Tabs from "@/components/MobileTabs";
 
 export default function Home() {
   return (
-    <div className="container">
-      <div className="main-grid">
-        <main>
-          <Stories />
-          <Posts />
-        </main>
-        <Aside />
+    <>
+      <Header />
+      <div className="container">
+        <div className="main-grid">
+          <main>
+            <Stories />
+            <Posts />
+          </main>
+          <Aside />
+        </div>
       </div>
-    </div>
+      <Tabs />
+    </>
   );
 }

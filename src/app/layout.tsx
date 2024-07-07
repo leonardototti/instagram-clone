@@ -18,17 +18,6 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <head>
-        <link
-          rel="icon"
-          sizes="192x192"
-          href="https://static.cdninstagram.com/rsrc.php/v3/yI/r/VsNE-OHk_8a.png"
-        />
-        <link
-          data-default-icon="https://static.cdninstagram.com/rsrc.php/y4/r/QaBlI0OZiks.ico"
-          rel="shortcut icon"
-          type="image/x-icon"
-          href="https://static.cdninstagram.com/rsrc.php/y4/r/QaBlI0OZiks.ico"
-        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

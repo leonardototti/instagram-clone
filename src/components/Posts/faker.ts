@@ -16,7 +16,11 @@ export default function generateFakePosts(): IPost[] {
         username: faker.internet.userName().toLowerCase(),
         avatar: faker.image.avatar(),
       },
-      image: faker.image.urlPicsumPhotos({ width: 614, height: 614 }),
+      image: faker.image.urlLoremFlickr({
+        width: 614,
+        height: 614,
+        category: "cats",
+      }),
       likes: {
         featured: {
           username: faker.internet.userName().toLowerCase(),

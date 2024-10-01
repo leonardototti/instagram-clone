@@ -9,7 +9,7 @@ export default function generateFakeStories(): IStory[] {
       id: faker.string.uuid(),
       user: {
         name: faker.internet.userName().toLowerCase(),
-        avatar: faker.image.avatarLegacy(),
+        avatar: faker.image.avatar(),
       },
     };
   });

@@ -14,13 +14,13 @@ export default function generateFakePosts(): IPost[] {
       id: faker.string.uuid(),
       user: {
         username: faker.internet.userName().toLowerCase(),
-        avatar: faker.image.avatarLegacy(),
+        avatar: faker.image.avatar(),
       },
       image: faker.image.urlPicsumPhotos({ width: 614, height: 614 }),
       likes: {
         featured: {
           username: faker.internet.userName().toLowerCase(),
-          avatar: faker.image.avatarLegacy(),
+          avatar: faker.image.avatar(),
         },
         count: formatter.format(
           Math.floor(Math.random() * (50000 - 15 + 1) + 15)
